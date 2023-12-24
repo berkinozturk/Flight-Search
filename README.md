@@ -27,8 +27,7 @@ FlightSearchAPI is designed to handle various operations related to flights, inc
 - Java
 - Spring Boot
 - Spring Data JPA
-- PostgreSQL (or your preferred database)
-- Other dependencies as per the project requirements
+- PostgreSQL 
 - Swagger
 - OAuth2
 
@@ -37,16 +36,16 @@ FlightSearchAPI is designed to handle various operations related to flights, inc
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/FlightSearchAPI.git
+   git clone https://github.com/berkinozturk/FlightSearchAPI.git
 
 
 2. **Database Configuration:**
 
-Configure your database settings in the application.properties or application.yml file.
+Configure your database settings in the application.properties file.
 
 3. **Build and Run:**
 
-Build the project using Maven or your preferred build tool.
+Build the project using Maven build tool.
 Run the application using your IDE or by executing the generated JAR file.
 
 <h2>After Logging In with Google Account</h2>
