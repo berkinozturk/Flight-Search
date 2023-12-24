@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class Airport implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "airport_id")
     private Long id;
 
     private String city;
