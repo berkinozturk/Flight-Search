@@ -38,51 +38,5 @@ public class Flight {
     }
 
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDepartureAirportId() {
-        return departureAirportId;
-    }
-
-    public void setDepartureAirportId(String departureAirportId) {
-        this.departureAirportId = departureAirportId;
-    }
-
-    public String getArrivalAirportId() {
-        return arrivalAirportId;
-    }
-
-    public void setArrivalAirportId(String arrivalAirportId) {
-        this.arrivalAirportId = arrivalAirportId;
-    }
-
-    public LocalDateTime getDepartureDateTime() {
-        return departureDateTime;
-    }
-
-    public void setDepartureDateTime(LocalDateTime departureDateTime) {
-        this.departureDateTime = departureDateTime;
-    }
-
-    public LocalDateTime getReturnDateTime() {
-        return returnDateTime;
-    }
-
-    public void setReturnDateTime(LocalDateTime returnDateTime) {
-        this.returnDateTime = returnDateTime;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
 }
