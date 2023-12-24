@@ -80,6 +80,35 @@ Run the application using your IDE or by executing the generated JAR file.
   <li>Provide further details or links to the API documentation for a comprehensive understanding of available endpoints and their functionalities.</li>
 </ul>
 
+<h2>Configuring PostgreSQL and Port Information</h2>
+
+<p>In order to connect and run the FlightSearchAPI successfully, ensure that you have configured the PostgreSQL database settings and specified the port information in the <code>application.properties</code> file.</p>
+
+<h3>PostgreSQL Configuration</h3>
+
+<p>Edit the <code>application.properties</code> file and provide the necessary PostgreSQL connection details:</p>
+
+<pre><code>
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+</code></pre>
+
+<p>Replace <code>your_database_name</code> with the name of your PostgreSQL database, <code>your_username</code> with your PostgreSQL username, and <code>your_password</code> with your PostgreSQL password.</p>
+
+<h3>Port Information</h3>
+
+<p>Specify the port information for running the FlightSearchAPI:</p>
+
+<pre><code>
+server.port=your_desired_port_number
+</code></pre>
+
+<p>Replace <code>your_desired_port_number</code> with the port number you want to use for running the FlightSearchAPI locally (e.g., 8080, 9090, etc.).</p>
+
+<p>Save the changes made to the <code>application.properties</code> file to ensure proper database connectivity and application execution.</p>
+
+
 
 ## Usage
 
