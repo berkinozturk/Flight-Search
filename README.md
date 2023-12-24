@@ -72,12 +72,6 @@ Run the application using your IDE or by executing the generated JAR file.
 
 <p>Choose the option that best suits your needs to interact with the FlightSearchAPI after logging in with your Google account.</p>
 
-<p><strong>Notes:</strong></p>
-<ul>
-  <li>Ensure your application is running locally (<code>localhost</code>) to access the provided functionalities.</li>
-  <li>If needed, refer users to specific setup instructions or prerequisites required to run the application locally.</li>
-  <li>Provide further details or links to the API documentation for a comprehensive understanding of available endpoints and their functionalities.</li>
-</ul>
 
 <h2>Configuring PostgreSQL and Port Information</h2>
 
@@ -88,12 +82,10 @@ Run the application using your IDE or by executing the generated JAR file.
 <p>Edit the <code>application.properties</code> file and provide the necessary PostgreSQL connection details:</p>
 
 <pre><code>
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=1234
 </code></pre>
-
-<p>Replace <code>your_database_name</code> with the name of your PostgreSQL database, <code>your_username</code> with your PostgreSQL username, and <code>your_password</code> with your PostgreSQL password.</p>
 
 <h3>Port Information</h3>
 
