@@ -4,14 +4,16 @@ package com.example.FlightSearchAPI.entity;
 import jakarta.persistence.*;
 
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "flights")
-public class Flight {
+public class Flight implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "flight_id")
     private Long id;
 
     @Column(name = "departure_airport_id")
@@ -36,5 +38,55 @@ public class Flight {
         this.returnDateTime = returnDateTime;
         this.price = price;
     }
-    
+
+    public Flight() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDepartureAirportId() {
+        return departureAirportId;
+    }
+
+    public void setDepartureAirportId(String departureAirportId) {
+        this.departureAirportId = departureAirportId;
+    }
+
+    public String getArrivalAirportId() {
+        return arrivalAirportId;
+    }
+
+    public void setArrivalAirportId(String arrivalAirportId) {
+        this.arrivalAirportId = arrivalAirportId;
+    }
+
+    public LocalDateTime getDepartureDateTime() {
+        return departureDateTime;
+    }
+
+    public void setDepartureDateTime(LocalDateTime departureDateTime) {
+        this.departureDateTime = departureDateTime;
+    }
+
+    public LocalDateTime getReturnDateTime() {
+        return returnDateTime;
+    }
+
+    public void setReturnDateTime(LocalDateTime returnDateTime) {
+        this.returnDateTime = returnDateTime;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }
