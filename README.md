@@ -31,7 +31,7 @@ FlightSearchAPI is designed to handle various operations related to flights, inc
 - Other dependencies as per the project requirements
 - Swagger
 - OAuth2
-- 
+
 ## Setup
 
 1. **Clone the Repository:**
