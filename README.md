@@ -162,3 +162,9 @@ server.port=your_desired_port_number
     <td>GET</td>
   </tr>
 </table>
+
+
+## Sample Images
+![Get By ID for flights](images/image1.png)
+![Get All Airports](images/image2.png)
+
