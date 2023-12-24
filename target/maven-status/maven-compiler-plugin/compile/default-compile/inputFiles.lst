@@ -1,0 +1,10 @@
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/service/AirportService.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/FlightSearchApiApplication.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/controller/FlightController.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/repository/AirportRepository.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/service/FlightService.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/repository/FlightRepository.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/entity/Flight.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/entity/Airport.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/controller/AirportController.java
+/Users/berkinozturk/Desktop/Flight-Search-API/src/main/java/com/example/FlightSearchAPI/SecurityConfig.java
