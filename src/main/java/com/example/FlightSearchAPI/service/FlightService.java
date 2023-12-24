@@ -3,6 +3,7 @@ package com.example.FlightSearchAPI.service;
 import com.example.FlightSearchAPI.entity.Flight;
 import com.example.FlightSearchAPI.repository.FlightRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 public class FlightService {
     private final FlightRepository flightRepository;
 
+    @Autowired
     public FlightService(FlightRepository flightRepository) {
         this.flightRepository = flightRepository;
     }

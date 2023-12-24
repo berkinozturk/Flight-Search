@@ -36,7 +36,5 @@ public class Flight {
         this.returnDateTime = returnDateTime;
         this.price = price;
     }
-
-
-
+    
 }
