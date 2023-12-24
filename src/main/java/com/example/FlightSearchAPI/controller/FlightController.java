@@ -1,13 +1,15 @@
 package com.example.FlightSearchAPI.controller;
 
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
 import com.example.FlightSearchAPI.entity.Flight;
 import com.example.FlightSearchAPI.service.FlightService;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/flights")
@@ -20,28 +22,35 @@ public class FlightController {
     }
 
     @GetMapping
-    public List<Flight> getAllFlights() {
-        return flightService.getAllFlights();
+    public ResponseEntity<List<Flight>> getAllFlights() {
+        List<Flight> flights = flightService.getAllFlights();
+        return ResponseEntity.ok(flights);
     }
 
     @GetMapping("/{id}")
-    public Flight getFlightById(@PathVariable Long id) {
-        return flightService.getFlightById(id);
+    public ResponseEntity<Flight> getFlightById(@PathVariable Long id) {
+        Optional<Flight> flight = Optional.ofNullable(flightService.getFlightById(id));
+        return flight.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Flight createFlight(@RequestBody Flight flight) {
-        return flightService.createFlight(flight);
+    public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
+        Flight createdFlight = flightService.createFlight(flight);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdFlight);
     }
 
     @PutMapping("/{id}")
-    public Flight updateFlight(@PathVariable Long id, @RequestBody Flight newFlight) {
-        return flightService.updateFlight(id, newFlight);
+    public ResponseEntity<Flight> updateFlight(@PathVariable Long id, @RequestBody Flight newFlight) {
+        Optional<Flight> updatedFlight = Optional.ofNullable(flightService.updateFlight(id, newFlight));
+        return updatedFlight.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
-    public void deleteFlight(@PathVariable Long id) {
-        flightService.deleteFlight(id);
+    public ResponseEntity<Void> deleteFlight(@PathVariable Long id) {
+        boolean deleted = flightService.deleteFlight(id);
+        return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/search")

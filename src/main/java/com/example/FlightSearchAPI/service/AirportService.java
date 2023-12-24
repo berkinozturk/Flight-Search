@@ -36,7 +36,8 @@ public class AirportService {
         return airportRepository.save(existingAirport);
     }
 
-    public void deleteAirport(Long id) {
+    public boolean deleteAirport(Long id) {
         airportRepository.deleteById(id);
+        return false;
     }
 }

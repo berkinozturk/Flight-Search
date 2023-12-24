@@ -40,7 +40,8 @@ public class FlightService {
         return flightRepository.save(existingFlight);
     }
 
-    public void deleteFlight(Long id) {
+    public boolean deleteFlight(Long id) {
         flightRepository.deleteById(id);
+        return false;
     }
 }
